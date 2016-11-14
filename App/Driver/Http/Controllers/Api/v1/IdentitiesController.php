@@ -2,7 +2,7 @@
 
 use Melisa\Laravel\Http\Controllers\Controller;
 use App\Core\Http\Requests\AddIdentity;
-use App\Core\Logics\Identities\AddIdentity as LogicAddIdentity;
+use App\Driver\Logics\Identities\CreateDriver;
 
 class IdentitiesController extends Controller
 {
@@ -12,10 +12,10 @@ class IdentitiesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function addDriver(AddIdentity $request, LogicAddIdentity $logic)
+    public function addDriver(AddIdentity $request, CreateDriver $createDriver)
     {
         
-        $output = $logic->init($request->allValid());
+        $output = $createDriver->init($request->user()->id, $request->allValid());
         
         return response()->create($output);
         
