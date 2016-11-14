@@ -1,8 +1,8 @@
 <?php namespace App\Driver\Http\Controllers\Api\v1;
 
 use Melisa\Laravel\Http\Controllers\Controller;
-use App\Core\Http\Requests\AddIdentity;
-use App\Driver\Logics\Identities\CreateDriver;
+use App\Core\Http\Requests\CreateIdentity as Request;
+use App\Driver\Logics\Identities\CreateDriver as Logic;
 
 class DriversController extends Controller
 {
@@ -12,7 +12,7 @@ class DriversController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(AddIdentity $request, CreateDriver $createDriver)
+    public function create(Request $request, Logic $createDriver)
     {
         
         $output = $createDriver->init($request->user()->id, $request->allValid());
