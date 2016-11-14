@@ -17,6 +17,7 @@ Route::group([
     'namespace' =>'v1'
 ], function() {
     
-    Route::post('identities/addDriver', 'IdentitiesController@addDriver');
+    Route::post('drivers', 'DriversController@create');
+    Route::post('passengers', 'PassengersController@create');
     
 });

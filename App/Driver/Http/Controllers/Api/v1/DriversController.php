@@ -4,15 +4,15 @@ use Melisa\Laravel\Http\Controllers\Controller;
 use App\Core\Http\Requests\AddIdentity;
 use App\Driver\Logics\Identities\CreateDriver;
 
-class IdentitiesController extends Controller
+class DriversController extends Controller
 {
 
     /**
-     * Add driver
+     * Create identity driver
      *
      * @return \Illuminate\Http\Response
      */
-    public function addDriver(AddIdentity $request, CreateDriver $createDriver)
+    public function create(AddIdentity $request, CreateDriver $createDriver)
     {
         
         $output = $createDriver->init($request->user()->id, $request->allValid());
