@@ -14,13 +14,8 @@ class ExampleTest extends TestCase
     public function testBasicExample()
     {
         
-//        $response = $this->call('GET', '/api/status');
+        $this->visit('/')
+             ->see('Laravel');
         
-        $this->get('/api/status')
-            ->seeJsonStructure([
-                'success'=>true
-            ]);
-//        $this->visit('/')
-//             ->see('Laravel');
     }
 }

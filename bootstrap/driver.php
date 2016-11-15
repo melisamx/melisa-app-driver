@@ -11,7 +11,7 @@
 |
 */
 
-include __DIR__ . '/../App/Driver/Application.php';
+require_once __DIR__ . '/../App/Driver/Application.php';
 
 $app = new App\Driver\Application(
     [
