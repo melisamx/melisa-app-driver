@@ -4,7 +4,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+class ApiStatusTest extends TestCase
 {
     /**
      * A basic functional test example.
@@ -14,13 +14,10 @@ class ExampleTest extends TestCase
     public function testBasicExample()
     {
         
-//        $response = $this->call('GET', '/api/status');
-        
-        $this->get('/api/status')
-            ->seeJsonStructure([
+        $this->json('GET', '/api/status')
+            ->seeJson([
                 'success'=>true
             ]);
-//        $this->visit('/')
-//             ->see('Laravel');
+        
     }
 }

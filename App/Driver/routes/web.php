@@ -16,3 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'HomeController@index');
+Route::get('/api/status', function() {
+    return [
+        'success' => true,
+        'state' => 'CA'
+    ];
+});
