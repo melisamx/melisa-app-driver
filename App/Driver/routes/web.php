@@ -1,24 +1,4 @@
-<?php
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+<?php 
 
 Route::get('/home', 'HomeController@index');
-Route::get('/api/status', function() {
-    return [
-        'success' => true,
-        'state' => 'CA'
-    ];
-});
+Route::get('/driver', 'DriverController@index');
