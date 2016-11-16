@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Core\Models\Profiles;
+
 class ProfilesSeeder extends Seeder
 {
     /**
@@ -12,19 +14,18 @@ class ProfilesSeeder extends Seeder
     public function run()
     {
         
-        DB::table('profiles')->insert([
-//            [
-//                'id'=>2,
-//                'name'=>'Drivers',
-//                'key'=>'driver',
-//                'icon'=>'fa fa-people',
-//            ],
-            [
-                'id'=>3,
-                'name'=>'Passengers',
-                'key'=>'passenger',
-                'icon'=>'fa fa-people',
-            ],
+        Profiles::firstOrCreate([
+            'id'=>2,
+            'name'=>'Drivers',
+            'key'=>'driver',
+            'icon'=>'fa fa-people',
+        ]);
+        
+        Profiles::firstOrCreate([
+            'id'=>3,
+            'name'=>'Passengers',
+            'key'=>'passenger',
+            'icon'=>'fa fa-people',
         ]);
         
     }

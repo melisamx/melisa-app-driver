@@ -2,34 +2,32 @@
 
 use Illuminate\Database\Seeder;
 
+use Melisa\Laravel\Database\FirstOrCreate;
+
 class DriversStatusSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
+    use FirstOrCreate;
+    
     public function run()
     {
         
-        DB::connection('app')->table('DriversStatus')->insert([
+        $this->firstOrCreate('App\Driver\Models\DriversStatus', [
             [
                 'id'=>1,
                 'name'=>'FUERA DE LINEA',
-            ],
-            [
+            ], [
                 'id'=>2,
                 'name'=>'EN LINEA',
-            ],
-            [
+            ], [
                 'id'=>3,
                 'name'=>'BLOQUEADO',
-            ],
-            [
+            ], [
                 'id'=>4,
                 'name'=>'EN SERVICIO',
-            ],
+            ]
         ]);
         
     }
+    
 }

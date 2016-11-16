@@ -1,29 +1,31 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Melisa\Laravel\Database\IdSeeder;
+use Melisa\Laravel\Database\FirstOrCreate;
 
 class VehiclesTypeSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
+    use IdSeeder, FirstOrCreate;
+    
     public function run()
     {
         
-        DB::connection('app')->table('VehiclesTypes')->insert([
+        $id = $this->getIdInt();
+        
+        $this->firstOrCreate('App\Driver\Models\VehiclesTypes', [
             [
                 'id'=>1,
-                'idVehicleClass'=>1,
+                'idVehicleClass'=>$id,
                 'name'=>'SEDAN',
-            ],
-            [
+            ], [
                 'id'=>2,
-                'idVehicleClass'=>1,
+                'idVehicleClass'=>$id,
                 'name'=>'CAMIONETA',
-            ],
+            ]
         ]);
         
     }
+    
 }

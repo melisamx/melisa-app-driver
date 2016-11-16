@@ -1,25 +1,26 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Driver\Models\Rates;
+use Melisa\Laravel\Database\IdSeeder;
 
 class RatesSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
+    use IdSeeder;
+    
     public function run()
     {
         
-        DB::connection('app')->table('Rates')->insert([
-            [
-                'id'=>"173f832d-9a18-11e6-b65e-080027f62005",
-                'idIdentityCreator'=>'3363e084-70b5-4d88-9384-ceedaa654fb6',
-                'name'=>'BASICA',
-                'isDefault'=>true,
-            ],
+        $id = $this->getId();
+        
+        Rates::firstOrCreate([
+            'id'=>$id,
+            'idIdentityCreator'=>$id,
+            'name'=>'BASICA',
+            'isDefault'=>true,
         ]);
         
     }
+    
 }

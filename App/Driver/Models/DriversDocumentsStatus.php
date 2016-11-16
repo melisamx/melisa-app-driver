@@ -2,12 +2,12 @@
 
 use Melisa\Laravel\Models\Base;
 
-class VehiclesClass extends Base
+class DriversDocumentsStatus extends Base
 {
     
     protected $connection = 'app';
     
-    protected $table = 'VehiclesClass';
+    protected $table = 'DriversDocumentsStatus';
     
     protected $fillable = [
         'id', 'name'

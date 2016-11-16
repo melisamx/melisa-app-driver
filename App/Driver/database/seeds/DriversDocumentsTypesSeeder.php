@@ -1,18 +1,17 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Melisa\Laravel\Database\FirstOrCreate;
 
-class DriversDocumentsTypeSeeder extends Seeder
+class DriversDocumentsTypesSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
+    use FirstOrCreate;
+    
     public function run()
     {
         
-        DB::connection('app')->table('DriversDocumentsType')->insert([
+        $this->FirstOrCreate('App\Driver\Models\DriversDocumentsTypes', [
             [
                 'id'=>1,
                 'name'=>'LICENCIA PARA CONDUCIR VIGENTE',
@@ -40,4 +39,5 @@ class DriversDocumentsTypeSeeder extends Seeder
         ]);
         
     }
+    
 }

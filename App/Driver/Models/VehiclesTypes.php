@@ -7,10 +7,14 @@ class VehiclesTypes extends Base
     
     protected $connection = 'app';
     
+    protected $table = 'VehiclesTypes';
+    
     protected $fillable = [
         'idVehicleClass', 'name'
     ];
     
-    public $timestamp = false;
+    public $timestamps = false;
+    
+    public $incrementing = false;
     
 }

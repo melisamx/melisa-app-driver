@@ -1,18 +1,17 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Melisa\Laravel\Database\FirstOrCreate;
 
 class PassengersStatusSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
+    use FirstOrCreate;
+    
     public function run()
     {
         
-        DB::connection('app')->table('PassengersStatus')->insert([
+        $this->firstOrCreate('App\Driver\Models\PassengersStatus', [
             [
                 'id'=>1,
                 'name'=>'FUERA DE LINEA',
@@ -36,4 +35,5 @@ class PassengersStatusSeeder extends Seeder
         ]);
         
     }
+    
 }

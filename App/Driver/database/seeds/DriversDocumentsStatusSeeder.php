@@ -1,18 +1,17 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Melisa\Laravel\Database\FirstOrCreate;
 
 class DriversDocumentsStatusSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
+    use FirstOrCreate;
+    
     public function run()
     {
         
-        DB::connection('app')->table('DriversDocumentsStatus')->insert([
+        $this->FirstOrCreate('App\Driver\Models\DriversDocumentsStatus', [
             [
                 'id'=>1,
                 'name'=>'NUEVO',
@@ -28,4 +27,5 @@ class DriversDocumentsStatusSeeder extends Seeder
         ]);
         
     }
+    
 }
