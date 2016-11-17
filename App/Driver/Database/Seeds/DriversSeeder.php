@@ -1,13 +1,13 @@
-<?php
+<?php namespace App\Driver\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Melisa\Laravel\Database\CreateIdentity;
-use App\Driver\Models\Drivers;
+use Melisa\Laravel\Database\FirstOrCreate;
 
 class DriversSeeder extends Seeder
 {
     
-    use CreateIdentity;
+    use CreateIdentity, FirstOrCreate;
     
     public function run()
     {
@@ -20,10 +20,12 @@ class DriversSeeder extends Seeder
         
         $this->call(VehiclesSeeder::class);
         
-        Drivers::firstOrCreate([
-            'id'=>$id,
-            'idVehicle'=>$id,
-            'idPeople'=>$id,
+        $this->firstOrCreate('App\Driver\Models\Drivers', [
+            [
+                'id'=>$id,
+                'idVehicle'=>$id,
+                'idPeople'=>$id,
+            ]
         ]);
         
     }

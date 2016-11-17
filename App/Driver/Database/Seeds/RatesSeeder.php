@@ -1,12 +1,11 @@
-<?php
+<?php namespace App\Driver\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use App\Driver\Models\Rates;
 use Melisa\Laravel\Database\IdSeeder;
 
 class RatesSeeder extends Seeder
-{
-    
+{    
     use IdSeeder;
     
     public function run()
@@ -16,6 +15,7 @@ class RatesSeeder extends Seeder
         
         Rates::firstOrCreate([
             'id'=>$id,
+        ], [
             'idIdentityCreator'=>$id,
             'name'=>'BASICA',
             'isDefault'=>true,

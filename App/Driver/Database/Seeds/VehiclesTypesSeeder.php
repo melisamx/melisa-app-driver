@@ -1,10 +1,10 @@
-<?php
+<?php namespace App\Driver\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Melisa\Laravel\Database\IdSeeder;
 use Melisa\Laravel\Database\FirstOrCreate;
 
-class VehiclesTypeSeeder extends Seeder
+class VehiclesTypesSeeder extends Seeder
 {
     
     use IdSeeder, FirstOrCreate;

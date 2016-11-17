@@ -1,29 +1,28 @@
-<?php
+<?php namespace App\Driver\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Melisa\Laravel\Database\FirstOrCreate;
 
-class ServicesStatusSeeder extends Seeder
-{
-    
+class DriversStatusSeeder extends Seeder
+{    
     use FirstOrCreate;
     
     public function run()
     {
         
-        $this->firstOrCreate('App\Driver\Models\ServicesStatus', [
+        $this->firstOrCreate('App\Driver\Models\DriversStatus', [
             [
                 'id'=>1,
-                'name'=>'NUEVO',
+                'name'=>'FUERA DE LINEA',
             ], [
                 'id'=>2,
-                'name'=>'CHOFER EN CAMINO',
+                'name'=>'EN LINEA',
             ], [
                 'id'=>3,
-                'name'=>'EN VIAJE',
+                'name'=>'BLOQUEADO',
             ], [
                 'id'=>4,
-                'name'=>'CANCELADO',
+                'name'=>'EN SERVICIO',
             ]
         ]);
         

@@ -1,4 +1,4 @@
-<?php
+<?php namespace App\Driver\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Melisa\Laravel\Database\FirstOrCreate;

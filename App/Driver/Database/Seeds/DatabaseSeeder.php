@@ -1,4 +1,4 @@
-<?php
+<?php namespace App\Driver\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 
@@ -7,6 +7,8 @@ class DatabaseSeeder extends Seeder
     
     public function run()
     {
+                
+        $this->call(ApplicationSeeder::class);
         
         $this->call(DriversSeeder::class);
         $this->call(RedirectsSeeder::class);

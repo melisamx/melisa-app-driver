@@ -1,15 +1,13 @@
-<?php
+<?php namespace App\Driver\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Melisa\Laravel\Database\FirstOrCreate;
 
 class DriversDocumentsTypesSeeder extends Seeder
-{
-    
+{    
     use FirstOrCreate;
     
-    public function run()
-    {
+    public function run() {
         
         $this->FirstOrCreate('App\Driver\Models\DriversDocumentsTypes', [
             [
