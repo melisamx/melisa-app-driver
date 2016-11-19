@@ -21,6 +21,16 @@ class AssetsSeeder extends Seeder
                     'name'=>'Application Sencha Main',
                     'path'=>'/driver/js/Application.js',
                 ]
+            ],
+            [
+                'find'=>[
+                    'id'=>'app.driver.dashboard.css',
+                ],
+                'values'=>[
+                    'idAssetType'=>2,
+                    'name'=>'Driver CSS Dashboard',
+                    'path'=>'/driver/css/dashboard.css',
+                ]
             ]
         ]);
         

@@ -12,9 +12,11 @@ class ManifestClassicModule extends ManifestSenchaModule
     
     public $cssAdd = [
         'animatecss',
+        'app.driver.dashboard.css',
     ];
     
     public $jsAdd = [
+        'https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAU7V5rGEn4X-ZjFUYqxwu28sAg3Fq6iis',
         'app.driver.main',
     ];
     
@@ -23,12 +25,9 @@ class ManifestClassicModule extends ManifestSenchaModule
         return [
             'urls'=>[
                 'realtime'=>'https://demo.nerine.mx:8044/',
-                'driversFree'=>'/driver.php/drivers/free/',
-                'tracking'=>'/driver.php/drivers/tracking/',
-                'offline'=>'/driver.php/drivers/offline/',
-                'online'=>'/driver.php/drivers/online/',
+                'identitiesCoordinates'=>'/driver.php/identities/coordinates/',
             ],
-            'driver'=>'asd'
+            'identity'=>'asd'
         ];
         
     }
