@@ -3,6 +3,7 @@
 use Melisa\Laravel\Http\Controllers\Controller;
 use App\Driver\Modules\DriverModule;
 use App\Driver\Modules\ManifestClassicModule;
+use App\Driver\Modules\ManifestModernModule;
 
 class DriverController extends Controller
 {
@@ -12,7 +13,7 @@ class DriverController extends Controller
         
         if( melisa('userAgent')->isMobile()) {
             
-            return $this->mobile();
+            return $this->mobile($module);
             
         }
         
@@ -20,9 +21,9 @@ class DriverController extends Controller
         
     }
     
-    public function mobile() {
+    public function mobile($module) {
         
-        return 'Driver controller mombile';
+        return $module->render();
         
     }
     
@@ -32,9 +33,9 @@ class DriverController extends Controller
         
     }
     
-    public function manifestModern() {
+    public function manifestModern(ManifestModernModule $module) {
         
-        return 'Driver controller modern classic';
+        return $module->render();
         
     }
     
