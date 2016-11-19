@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Melisa\Laravel\Database\FirstOrCreate;
 
-class ApplicationSeeder extends Seeder
+class AssetsSeeder extends Seeder
 {
     
     use FirstOrCreate;
@@ -11,16 +11,15 @@ class ApplicationSeeder extends Seeder
     public function run()
     {
         
-        $this->firstOrCreate('App\Core\Models\Applications', [
+        $this->firstOrCreate('App\Core\Models\Assets', [
             [
                 'find'=>[
-                    'key'=>'driver',
+                    'id'=>'app.driver.main',
                 ],
                 'values'=>[
-                    'name'=>'Driver',
-                    'description'=>'Application Driver',
-                    'nameSpace'=>'Melisa.driver',
-                    'typeSecurity'=>'arat'
+                    'idAssetType'=>1,
+                    'name'=>'Application Sencha Main',
+                    'path'=>'/driver/js/Application.js',
                 ]
             ]
         ]);

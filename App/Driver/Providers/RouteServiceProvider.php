@@ -6,22 +6,8 @@ use Illuminate\Support\Facades\Route;
 class RouteServiceProvider extends RouteService
 {
     
-    /**
-     * This namespace is applied to your controller routes.
-     *
-     * In addition, it is set as the URL generator's root namespace.
-     *
-     * @var string
-     */
     public $namespace = 'App\Driver\Http\Controllers';
     
-    /**
-     * Define the "api" routes for the application.
-     *
-     * These routes are typically stateless.
-     *
-     * @return void
-     */
     public function mapApiRoutes()
     {
         

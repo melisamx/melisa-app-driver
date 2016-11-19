@@ -25,7 +25,7 @@ class RedirectsSeeder extends Seeder
             'idApplication'=>$application->id,
             'idIdentityCreator'=>$id,
             'description'=>'Redirect all identities Drivers to Application Driver',
-            'path'=>'application/driver'
+            'path'=>'driver'
         ]);
         
         RedirectsProfiles::firstOrCreate([
