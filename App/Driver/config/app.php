@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Melisa Driver',
+    'name' => env('APP_NAME', 'Melisa'),
     'keyapp'=>'driver',
 
     /*
