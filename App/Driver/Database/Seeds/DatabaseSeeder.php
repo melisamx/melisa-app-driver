@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
         
         $this->call(AssetsSeeder::class);
         
+        $this->call(MenusOptionsSeeder::class);
+        
     }
     
 }
