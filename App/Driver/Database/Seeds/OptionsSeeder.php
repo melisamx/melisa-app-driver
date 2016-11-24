@@ -1,16 +1,16 @@
 <?php namespace App\Driver\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\FirstOrCreate;
+use Melisa\Laravel\Database\UpdateOrCreate;
 
 class OptionsSeeder extends Seeder
 {
-    use FirstOrCreate;
+    use UpdateOrCreate;
     
     public function run()
     {
         
-        $this->firstOrCreate('App\Core\Models\Options', [
+        $this->updateOrCreate('App\Core\Models\Options', [
             [
                 'find'=>[
                     'key'=>'app.driver.access'

@@ -16,7 +16,7 @@ class MenusSeeder extends Seeder
                     'key'=>'app.driver.main', 
                 ],
                 'values'=>[
-                    'name'=>'Menú main in Application Driver',
+                    'name'=>'Menu main in Application Driver',
                 ]
             ],   
             [
@@ -24,7 +24,7 @@ class MenusSeeder extends Seeder
                     'key'=>'app.driver.passengers.main', 
                 ],
                 'values'=>[
-                    'name'=>'Menú main for passengers in Application Driver',
+                    'name'=>'Menu main for passengers in Application Driver',
                 ]
             ],   
             [
@@ -32,7 +32,7 @@ class MenusSeeder extends Seeder
                     'key'=>'app.driver.drivers.main', 
                 ],
                 'values'=>[
-                    'name'=>'Menú main for drivers in Application Driver',
+                    'name'=>'Menu main for drivers in Application Driver',
                 ]
             ],   
         ]);

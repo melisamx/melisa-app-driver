@@ -12,14 +12,14 @@ class MenusOptionsSeeder extends Seeder
         $this->call(OptionsSeeder::class);
         
         app('App\Core\Logics\Menus\Install')->init([
-            'app.driver.passengers.main'=>[
-                'app.driver.passengers.profile.access',
-                'app.driver.passengers.services.access',
-                'app.driver.passengers.places.access',
-            ],
             'app.driver.drivers.main'=>[
-                'app.driver.drivers.profile.access',
-                'app.driver.drivers.services.history.access',
+                'app.driver.drivers.profile.view.access',
+                'app.driver.drivers.services.history.view.access',
+            ],
+            'app.driver.passengers.main'=>[
+                'app.driver.passengers.profile.view.access',
+                'app.driver.passengers.services.view.access',
+                'app.driver.passengers.places.view.access',
             ],
         ]);
         
