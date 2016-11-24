@@ -22,7 +22,7 @@ class OptionsSeeder extends Seeder
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.passengers.profile.access'
+                    'key'=>'app.driver.passengers.profile.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option profile module in application driver',
@@ -31,7 +31,7 @@ class OptionsSeeder extends Seeder
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.passengers.services.access'
+                    'key'=>'app.driver.passengers.services.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option travels module in application driver',
@@ -40,7 +40,7 @@ class OptionsSeeder extends Seeder
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.passengers.places.access'
+                    'key'=>'app.driver.passengers.places.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option places module in application driver',
@@ -49,7 +49,7 @@ class OptionsSeeder extends Seeder
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.drivers.profile.access'
+                    'key'=>'app.driver.drivers.profile.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option profile for drivers module in application driver',
@@ -58,7 +58,7 @@ class OptionsSeeder extends Seeder
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.drivers.services.history.access'
+                    'key'=>'app.driver.drivers.services.history.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option services for drivers module in application driver',
