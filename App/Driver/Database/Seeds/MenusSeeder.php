@@ -13,7 +13,7 @@ class MenusSeeder extends Seeder
         $this->updateOrCreate('App\Core\Models\Menus', [
             [
                 'find'=>[
-                    'key'=>'app.driver.main', 
+                    'key'=>'menu.driver.main', 
                 ],
                 'values'=>[
                     'name'=>'Menu main in Application Driver',
@@ -21,7 +21,7 @@ class MenusSeeder extends Seeder
             ],   
             [
                 'find'=>[
-                    'key'=>'app.driver.passengers.main', 
+                    'key'=>'menu.driver.passengers.main', 
                 ],
                 'values'=>[
                     'name'=>'Menu main for passengers in Application Driver',
@@ -29,7 +29,7 @@ class MenusSeeder extends Seeder
             ],   
             [
                 'find'=>[
-                    'key'=>'app.driver.drivers.main', 
+                    'key'=>'menu.driver.drivers.main', 
                 ],
                 'values'=>[
                     'name'=>'Menu main for drivers in Application Driver',

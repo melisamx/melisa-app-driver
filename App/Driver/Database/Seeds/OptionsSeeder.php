@@ -13,16 +13,17 @@ class OptionsSeeder extends Seeder
         $this->updateOrCreate('App\Core\Models\Options', [
             [
                 'find'=>[
-                    'key'=>'app.driver.access'
+                    'key'=>'option.driver.access'
                 ],
                 'values'=>[
                     'name'=>'Option main module in application driver',
-                    'text'=>'Driver'
+                    'text'=>'Driver',
+                    'isSubMenu'=>true
                 ]
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.passengers.profile.view.access'
+                    'key'=>'option.driver.passengers.profile.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option profile module in application driver',
@@ -31,7 +32,7 @@ class OptionsSeeder extends Seeder
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.passengers.services.view.access'
+                    'key'=>'option.driver.passengers.services.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option travels module in application driver',
@@ -40,7 +41,7 @@ class OptionsSeeder extends Seeder
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.passengers.places.view.access'
+                    'key'=>'option.driver.passengers.places.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option places module in application driver',
@@ -49,7 +50,7 @@ class OptionsSeeder extends Seeder
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.drivers.profile.view.access'
+                    'key'=>'option.driver.drivers.profile.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option profile for drivers module in application driver',
@@ -58,7 +59,7 @@ class OptionsSeeder extends Seeder
             ],
             [
                 'find'=>[
-                    'key'=>'app.driver.drivers.services.history.view.access'
+                    'key'=>'option.driver.drivers.services.history.view.access'
                 ],
                 'values'=>[
                     'name'=>'Option services for drivers module in application driver',
