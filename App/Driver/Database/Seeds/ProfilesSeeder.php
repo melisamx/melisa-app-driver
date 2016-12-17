@@ -1,35 +1,23 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\FirstOrCreate;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class ProfilesSeeder extends Seeder
+class ProfilesSeeder extends InstallSeeder
 {
-    use FirstOrCreate;
     
     public function run()
     {
         
-        $this->firstOrCreate('App\Core\Models\Profiles', [
-            [
-                'find'=>[
-                    'key'=>'driver',
-                ],
-                'values'=>[
-                    'name'=>'Drivers',
-                    'icon'=>'fa fa-people',
-                ]
-            ],
-            [
-                'find'=>[
-                    'key'=>'passenger',
-                ],
-                'values'=>[
-                    'name'=>'Passengers',                    
-                    'icon'=>'fa fa-people',
-                ],
-            ]
+        $this->installProfile('driver', [
+            'name'=>'Drivers',
+            'icon'=>'fa fa-people',
+        ]);        
+        
+        $this->installProfile('passenger', [
+            'name'=>'Passengers',                    
+            'icon'=>'fa fa-people',
         ]);
         
     }
+    
 }

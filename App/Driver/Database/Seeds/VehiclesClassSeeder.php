@@ -1,17 +1,14 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\FirstOrCreate;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class VehiclesClassSeeder extends Seeder
+class VehiclesClassSeeder extends InstallSeeder
 {
-    
-    use FirstOrCreate;
     
     public function run()
     {
                 
-        $this->firstOrCreate('App\Driver\Models\VehiclesClass', [
+        $this->updateOrCreate('App\Driver\Models\VehiclesClass', [
             [
                 'id'=>1,
                 'name'=>'AUTOMOVIL',

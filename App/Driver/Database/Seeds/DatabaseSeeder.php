@@ -22,9 +22,9 @@ class DatabaseSeeder extends Seeder
         $this->call(RatesConceptsSeeder::class);
         $this->call(RatesCalculationsSeeder::class);
         
-        $this->call(AssetsSeeder::class);
-        
-        $this->call(MenusOptionsSeeder::class);
+//        $this->call(AssetsSeeder::class);
+//        
+//        $this->call(MenusOptionsSeeder::class);
         
         $this->call(ModulesSeeder::class);
         

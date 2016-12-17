@@ -1,23 +1,14 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use App\Driver\Models\Rates;
-use Melisa\Laravel\Database\IdSeeder;
+use App\Driver\Database\Seeds\InstallDriverSeeder;
 
-class RatesSeeder extends Seeder
-{    
-    use IdSeeder;
+class RatesSeeder extends InstallDriverSeeder
+{
     
     public function run()
     {
         
-        $id = $this->getId();
-        
-        Rates::firstOrCreate([
-            'id'=>$id,
-        ], [
-            'idIdentityCreator'=>$id,
-            'name'=>'BASICA',
+        $this->installRate('BASICA', [
             'isDefault'=>true,
         ]);
         

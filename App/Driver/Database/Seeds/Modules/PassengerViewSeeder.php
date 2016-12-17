@@ -1,14 +1,14 @@
 <?php namespace App\Driver\Database\Seeds\Modules;
 
-use Illuminate\Database\Seeder;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class PassengerViewSeeder extends Seeder
+class PassengerViewSeeder extends InstallSeeder
 {
     
     public function run()
     {
         
-        app('App\Core\Logics\Modules\Install')->init([
+        $this->installModule([
             [
                 'name'=>'View profile for passengers',
                 'url'=>'/driver.php/modules/passengers/profile/view',

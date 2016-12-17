@@ -1,20 +1,16 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\IdSeeder;
-use Melisa\Laravel\Database\FirstOrCreate;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class VehiclesTypesSeeder extends Seeder
+class VehiclesTypesSeeder extends InstallSeeder
 {
-    
-    use IdSeeder, FirstOrCreate;
     
     public function run()
     {
         
         $id = $this->getIdInt();
         
-        $this->firstOrCreate('App\Driver\Models\VehiclesTypes', [
+        $this->updateOrCreate('App\Driver\Models\VehiclesTypes', [
             [
                 'id'=>1,
                 'idVehicleClass'=>$id,

@@ -1,16 +1,14 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\FirstOrCreate;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class PassengersStatusSeeder extends Seeder
-{    
-    use FirstOrCreate;
+class PassengersStatusSeeder extends InstallSeeder
+{
     
     public function run()
     {
         
-        $this->firstOrCreate('App\Driver\Models\PassengersStatus', [
+        $this->updateOrCreate('App\Driver\Models\PassengersStatus', [
             [
                 'id'=>1,
                 'name'=>'FUERA DE LINEA',

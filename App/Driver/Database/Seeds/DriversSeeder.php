@@ -1,13 +1,9 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\CreateIdentity;
-use Melisa\Laravel\Database\FirstOrCreate;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class DriversSeeder extends Seeder
+class DriversSeeder extends InstallSeeder
 {
-    
-    use CreateIdentity, FirstOrCreate;
     
     public function run()
     {
@@ -15,12 +11,18 @@ class DriversSeeder extends Seeder
         $this->call(ProfilesSeeder::class);
         $this->call(DriversStatusSeeder::class);
         
-        $this->createIdentity('driver');
+        $this->installIdentity('driver', 'developer', [
+            'display'=>'Developer driver',
+            'displayEspecific'=>'Developer driver',
+            'active'=>true,
+            'isDefault'=>false,
+        ]);
+        
         $id = $this->getId();
         
         $this->call(VehiclesSeeder::class);
         
-        $this->firstOrCreate('App\Driver\Models\Drivers', [
+        $this->updateOrCreate('App\Driver\Models\Drivers', [
             [
                 'id'=>$id,
                 'idVehicle'=>$id,

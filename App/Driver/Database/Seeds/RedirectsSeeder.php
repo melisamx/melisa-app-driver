@@ -1,39 +1,21 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\IdSeeder;
-use Melisa\Laravel\Database\FindApplication;
-use Melisa\Laravel\Database\FindProfile;
-use App\Core\Models\Redirects;
-use App\Core\Models\RedirectsProfiles;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class RedirectsSeeder extends Seeder
+class RedirectsSeeder extends InstallSeeder
 {
-    
-    use IdSeeder, FindApplication, FindProfile;
     
     public function run()
     {
         
-        $id = $this->getId();
-        $application = $this->findApplication('driver');
-        $profile = $this->FindProfile('driver');
+        $name = 'Redirect Drivers to Application Driver';
         
-        $redirect = Redirects::firstOrCreate([
-            'name'=>'Redirect Drivers to Application Driver',            
-        ], [
-            'idApplication'=>$application->id,
-            'idIdentityCreator'=>$id,
+        $this->installRedirect('driver', $name, [
             'description'=>'Redirect all identities Drivers to Application Driver',
             'path'=>'driver'
         ]);
         
-        RedirectsProfiles::firstOrCreate([
-            'idRedirect'=>$redirect->id,
-            'idProfile'=>$profile->id,
-        ], [
-            'idIdentityCreator'=>$id,
-        ]);
+        $this->installRedirectProfile($name, 'driver');
         
     }
     
