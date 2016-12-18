@@ -18,7 +18,7 @@ Ext.define('Melisa.driver.ux.MarkerLabel', {
             
         }
         
-        MarkerLabel.prototype = $.extend(new google.maps.OverlayView(), {
+        MarkerLabel.prototype = Ext.applyIf(new google.maps.OverlayView(), {
             onAdd: function() {
                 this.getPanes().overlayImage.appendChild(this.span);
                 var self = this;

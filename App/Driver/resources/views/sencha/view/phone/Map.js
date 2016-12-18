@@ -1,8 +1,11 @@
 
 Ext.define('Melisa.driver.view.phone.Map', {
-    extend: 'Ext.Map',
-    
+    extend: 'Ext.ux.google.Map',    
     alias: 'widget.appdrivermap',
+    
+    requires: [
+        'Ext.ux.google.Map'
+    ],
     
     hideAnimation: 'slideOut',
     publishes: [

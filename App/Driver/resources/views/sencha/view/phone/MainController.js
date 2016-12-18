@@ -1,6 +1,6 @@
-
 Ext.define('Melisa.driver.view.phone.MainController', {
     extend: 'Melisa.core.ViewController',
+    alias: 'controller.appdrivermaincontroller',
     
     requires: [
         'Melisa.driver.view.phone.MenuModal',
@@ -10,8 +10,6 @@ Ext.define('Melisa.driver.view.phone.MainController', {
         'Melisa.driver.ux.Loader',
         'Melisa.driver.ux.Status'
     ],
-    
-    alias: 'controller.appdrivermaincontroller',
     
     routes: {
         menu: 'onRouteShowMenu',

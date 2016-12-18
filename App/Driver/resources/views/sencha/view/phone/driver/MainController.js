@@ -1,8 +1,6 @@
-/* 
- * 
- */
 Ext.define('Melisa.driver.view.phone.driver.MainController', {
     extend: 'Melisa.core.ViewController',
+    alias: 'controller.appdriverdrivermaincontroller',
     
     requires: [
         'Melisa.driver.ux.Loader',
@@ -10,8 +8,6 @@ Ext.define('Melisa.driver.view.phone.driver.MainController', {
         'Melisa.driver.ux.Socket',
         'Melisa.driver.ux.Status'
     ],
-    
-    alias: 'controller.appdriverdrivermaincontroller',
     
     config: {
         trackingLocation: null,
