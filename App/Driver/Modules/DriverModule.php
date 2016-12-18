@@ -13,7 +13,7 @@ class DriverModule extends ApplicationSenchaModule
     public function dataDictionary() {
         
         $config = [
-            'urlManifest'=>'../driver.php/driver/manifest/',
+            'urlManifest'=>'manifest/',
         ];
         
         return melisa('array')->mergeDefault($config, parent::dataDictionary());

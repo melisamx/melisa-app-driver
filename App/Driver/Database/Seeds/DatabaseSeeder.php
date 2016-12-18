@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
 //        $this->call(MenusOptionsSeeder::class);
         
         $this->call(ModulesSeeder::class);
+        $this->call(TranslationsSeeder::class);
         
     }
     

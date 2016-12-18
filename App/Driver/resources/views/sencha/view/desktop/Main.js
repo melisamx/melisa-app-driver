@@ -1,6 +1,3 @@
-/*
- * 
- */
 Ext.define('Melisa.driver.view.desktop.Main', {
     extend: 'Ext.container.Viewport',
     

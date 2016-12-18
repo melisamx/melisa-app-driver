@@ -4,6 +4,9 @@ use App\Driver\Models\Rates;
 use App\Driver\Models\RatesConcepts;
 use App\Driver\Models\RatesCalculations;
 use Melisa\Laravel\Database\InstallSeeder;
+use App\Driver\Models\VehiclesClass;
+use App\Driver\Models\Vehicles;
+use App\Driver\Models\VehiclesTypes;
 
 /**
  * 
@@ -38,9 +41,42 @@ class InstallDriverSeeder extends InstallSeeder
         
     }
     
+    public function installVehicle($enrollment, $typeName, array $values = []) {
+        
+        $vehicleType = $this->findVehicleType($typeName);
+        $identity = $this->findIdentity();
+        
+        $values ['idVehicleType']= $vehicleType->id;
+        $values ['idIdentityCreator']= $identity->id;
+        
+        Vehicles::updateOrCreate([
+            'enrollment'=>$enrollment,
+        ], $values);
+        
+        
+    }
+    
     public function findRate($name) {
         
         return Rates::where('name', $name)->firstOrFail();
+        
+    }
+    
+    public function findVehicle($enrollment) {
+        
+        return Vehicles::where('enrollment', $enrollment)->firstOrFail();
+        
+    }
+    
+    public function findVehicleClass($name) {
+        
+        return VehiclesClass::where('name', $name)->firstOrFail();
+        
+    }
+    
+    public function findVehicleType($name) {
+        
+        return VehiclesTypes::where('name', $name)->firstOrFail();
         
     }
     

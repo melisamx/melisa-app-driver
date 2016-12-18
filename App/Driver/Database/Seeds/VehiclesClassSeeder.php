@@ -17,7 +17,7 @@ class VehiclesClassSeeder extends InstallSeeder
                 'name'=>'PICK UP',
             ], [
                 'id'=>3,
-                'name'=>'MOTOCICLETASP',
+                'name'=>'MOTOCICLETAS',
             ]
         ]);
         

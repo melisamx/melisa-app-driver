@@ -12,19 +12,20 @@ class ManifestClassicModule extends ManifestSenchaModule
     
     public $cssAdd = [
         'animatecss',
-        'app.driver.dashboard.css',
+        'asset.driver.dashboard.css',
     ];
     
     public $jsAdd = [
-        'https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAU7V5rGEn4X-ZjFUYqxwu28sAg3Fq6iis',
-        'app.driver.main',
+        'asset.driver.main',        
     ];
     
     public function config() {
         
+        $this->jsAdd []= config('googlemaps.api') . '&key=' . config('googlemaps.key');
+        
         return [
             'urls'=>[
-                'realtime'=>'https://demo.nerine.mx:8044/',
+                'realtime'=>config('app.urlRealtime'),
                 'identitiesCoordinates'=>'/driver.php/identities/coordinates/',
             ],
             'identity'=>'asd'

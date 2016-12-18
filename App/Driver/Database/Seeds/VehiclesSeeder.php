@@ -1,8 +1,6 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Melisa\Laravel\Database\InstallSeeder;
-
-class VehiclesSeeder extends InstallSeeder
+class VehiclesSeeder extends InstallDriverSeeder
 {
     
     public function run()
@@ -11,19 +9,9 @@ class VehiclesSeeder extends InstallSeeder
         $this->call(VehiclesClassSeeder::class);
         $this->call(VehiclesTypesSeeder::class);
         
-        $this->updateOrCreate('App\Driver\Models\Vehicles', [
-            [
-                'find'=>[
-                    'id'=>$this->getId(),
-                ],
-                'values'=>[
-                    'idVehicleType'=>1,
-                    'idIdentityCreator'=>'SEDAN',
-                    'enrollment'=>'AA-123-12',
-                    'brand'=>'NISSAN',
-                    'model'=>'SENTRA',
-                ]
-            ],
+        $this->installVehicle('AAA-111-222', 'SEDAN', [
+            'brand'=>'NISSAN',
+            'model'=>'SENTRA',
         ]);
         
     }

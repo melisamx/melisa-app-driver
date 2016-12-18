@@ -1,8 +1,6 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Melisa\Laravel\Database\InstallSeeder;
-
-class DriversSeeder extends InstallSeeder
+class DriversSeeder extends InstallDriverSeeder
 {
     
     public function run()
@@ -11,7 +9,7 @@ class DriversSeeder extends InstallSeeder
         $this->call(ProfilesSeeder::class);
         $this->call(DriversStatusSeeder::class);
         
-        $this->installIdentity('driver', 'developer', [
+        $this->installIdentity('Developer driver', 'driver', 'developer', [
             'display'=>'Developer driver',
             'displayEspecific'=>'Developer driver',
             'active'=>true,

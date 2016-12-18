@@ -15,14 +15,11 @@ class ManifestModernModule extends ManifestClassicModule
     public $cssAdd = [
         'animatecss',
         'waves.sencha',
-        'app.driver.dashboard.css',
+        'asset.driver.dashboard.css',
     ];
     
     public $jsAdd = [
-        'jquery',
-        'waves',
-        'https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAU7V5rGEn4X-ZjFUYqxwu28sAg3Fq6iis',
-        'app.driver.main',
+        'asset.driver.main',
     ];
     
 }

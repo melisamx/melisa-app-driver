@@ -1,27 +1,14 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\UpdateOrCreate;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class TranslationsSeeder extends Seeder
+class TranslationsSeeder extends InstallSeeder
 {
-    use UpdateOrCreate;
     
     public function run()
     {
         
-        $this->updateOrCreate('App\Core\Models\Translations', [
-            [
-                'find'=>[
-                    'idTranslationLanguage'=>'es',
-                    'key'=>'option.driver.passengers.profile.view.access',
-                ],
-                'values'=>[
-                    'text'=>'Ver perfil'
-                ]
-            ],
-            
-        ]);
+        $this->i18n('es', 'option.driver.passengers.profile.view.access', 'Ver perfil');
         
     }
     

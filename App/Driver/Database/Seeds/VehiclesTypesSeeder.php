@@ -1,23 +1,21 @@
 <?php namespace App\Driver\Database\Seeds;
 
-use Melisa\Laravel\Database\InstallSeeder;
-
-class VehiclesTypesSeeder extends InstallSeeder
+class VehiclesTypesSeeder extends InstallDriverSeeder
 {
     
     public function run()
     {
         
-        $id = $this->getIdInt();
+        $vehicleClass = $this->findVehicleClass('AUTOMOVIL');
         
         $this->updateOrCreate('App\Driver\Models\VehiclesTypes', [
             [
                 'id'=>1,
-                'idVehicleClass'=>$id,
+                'idVehicleClass'=>$vehicleClass->id,
                 'name'=>'SEDAN',
             ], [
                 'id'=>2,
-                'idVehicleClass'=>$id,
+                'idVehicleClass'=>$vehicleClass->id,
                 'name'=>'CAMIONETA',
             ]
         ]);
