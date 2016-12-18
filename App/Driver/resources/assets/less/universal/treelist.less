@@ -1,0 +1,54 @@
+
+.x-treelist-item-text {
+    margin-left: 50px;
+    font-size: 19px;
+    /*padding: 8px 0px;*/
+}
+
+.x-treelist-item-icon {
+    color: #333;
+}
+
+.x-treelist-item-icon::before, 
+.x-treelist-item-tool::before, 
+.x-treelist-item-expander,
+.x-treelist-item-text
+{
+    line-height: 50px !important;
+    color: #585858;
+}
+
+.x-treelist-item-icon::before, 
+.x-treelist-item-tool::before
+{
+    color: #ABBEC3;
+}
+
+.x-treelist-expander-first .x-treelist-item-text
+{
+    margin-left: 50px;
+}
+
+.x-treelist-item-selected > .x-treelist-row
+{
+    background-color: #F5F5F5;
+}
+
+.x-treelist-item-selected {
+    
+    .x-treelist-item-text,
+    .x-treelist-item-icon
+    {
+        /*font-weight: bold;*/
+    }
+    
+    .x-treelist-row
+    {
+        box-shadow: 4px 0 0 0 #f82739 inset;
+    }
+    
+}
+
+.x-treelist-row-over {
+    background-color: #F5F5F5;
+}

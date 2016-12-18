@@ -1,6 +1,4 @@
-<?php namespace App\Driver\Modules;
-
-use App\Driver\Modules\ManifestClassicModule;
+<?php namespace App\Driver\Modules\Drivers;
 
 /**
  * 
@@ -15,11 +13,11 @@ class ManifestModernModule extends ManifestClassicModule
     public $cssAdd = [
         'animatecss',
         'waves.sencha',
-        'asset.driver.dashboard.css',
+        'asset.driver.phone.driver.dashboard',
     ];
     
     public $jsAdd = [
-        'asset.driver.main',
+        'asset.driver.driver.dashboard',
     ];
     
 }

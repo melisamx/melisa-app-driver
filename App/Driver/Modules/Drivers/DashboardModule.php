@@ -1,4 +1,4 @@
-<?php namespace App\Driver\Modules;
+<?php namespace App\Driver\Modules\Drivers;
 
 use App\Core\Modules\ApplicationSenchaModule;
 
@@ -7,7 +7,7 @@ use App\Core\Modules\ApplicationSenchaModule;
  *
  * @author Luis Josafat Heredia Contreras
  */
-class DriverModule extends ApplicationSenchaModule
+class DashboardModule extends ApplicationSenchaModule
 {
     
     public function dataDictionary() {

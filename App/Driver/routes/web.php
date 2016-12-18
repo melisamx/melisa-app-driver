@@ -1,14 +1,24 @@
 <?php 
 
-Route::get('/home', 'HomeController@index');
-Route::get('/driver', 'DriverController@index');
+Route::get('/passengers', 'PassengersController@index');
 
 Route::group([
-    'prefix'=>'driver/manifest'
+    'prefix'=>'passengers/manifest'
 ], function() {
     
-    Route::get('classic', 'DriverController@manifestClassic');
-    Route::get('modern', 'DriverController@manifestModern');
+    Route::get('classic', 'PassengersController@manifestClassic');
+    Route::get('modern', 'PassengersController@manifestModern');
+
+});
+
+Route::get('/drivers', 'DriversController@index');
+
+Route::group([
+    'prefix'=>'drivers/manifest'
+], function() {
+    
+    Route::get('classic', 'DriversController@manifestClassic');
+    Route::get('modern', 'DriversController@manifestModern');
 
 });
 

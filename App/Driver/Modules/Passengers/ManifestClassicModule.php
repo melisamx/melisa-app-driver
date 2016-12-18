@@ -1,4 +1,4 @@
-<?php namespace App\Driver\Modules;
+<?php namespace App\Driver\Modules\Passengers;
 
 use App\Core\Modules\ManifestSenchaModule;
 
@@ -12,11 +12,11 @@ class ManifestClassicModule extends ManifestSenchaModule
     
     public $cssAdd = [
         'animatecss',
-        'asset.driver.dashboard.css',
+        'asset.driver.passengers.dashboard',
     ];
     
     public $jsAdd = [
-        'asset.driver.main',        
+        'asset.driver.passengers.dashboard',        
     ];
     
     public function config() {
