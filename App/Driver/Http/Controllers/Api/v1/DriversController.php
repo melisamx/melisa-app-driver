@@ -4,6 +4,11 @@ use Melisa\Laravel\Http\Controllers\Controller;
 use App\Core\Http\Requests\CreateIdentity as Request;
 use App\Driver\Logics\Identities\CreateDriver as Logic;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class DriversController extends Controller
 {
 

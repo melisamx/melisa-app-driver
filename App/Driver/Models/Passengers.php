@@ -3,6 +3,11 @@
 use Illuminate\Database\Eloquent\Model;
 use Melisa\core\orm\ErrorHumanTrait;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class Passenger extends Model
 {
     

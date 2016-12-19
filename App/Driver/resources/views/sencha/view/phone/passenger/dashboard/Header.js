@@ -8,7 +8,9 @@ Ext.define('Melisa.driver.view.phone.passenger.dashboard.Header', {
             xtype: 'button',
             iconCls: 'x-fa fa fa-bars',
             reference: 'btnTitle',
-            text: 'Driver',
+            bind: {
+                text: '{appName}'
+            },
             listeners: {
                 tap: 'onTapBtnDriver'
             }

@@ -4,6 +4,11 @@ use Melisa\Laravel\Http\Controllers\Controller;
 use App\Driver\Http\Requests\CreatePassengerRequest as Request;
 use App\Driver\Logics\Identities\CreatePassenger as Logic;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class PassengersController extends Controller
 {
 

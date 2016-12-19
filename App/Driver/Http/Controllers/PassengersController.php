@@ -5,6 +5,11 @@ use App\Driver\Modules\Passengers\DashboardModule;
 use App\Driver\Modules\Passengers\ManifestClassicModule;
 use App\Driver\Modules\Passengers\ManifestModernModule;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class PassengersController extends Controller
 {
     

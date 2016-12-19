@@ -3,6 +3,11 @@
 use Melisa\Laravel\Providers\RouteServiceProvider as RouteService;
 use Illuminate\Support\Facades\Route;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class RouteServiceProvider extends RouteService
 {
     
@@ -15,7 +20,7 @@ class RouteServiceProvider extends RouteService
             'middleware' => 'api',
             'namespace' => $this->namespace . '\Api',
             'prefix' => 'api',
-        ], function ($router) {
+        ], function () {
             require base_path('routes/api.php');
         });
         

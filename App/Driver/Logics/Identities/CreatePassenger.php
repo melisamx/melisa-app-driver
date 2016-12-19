@@ -10,8 +10,7 @@ use App\Driver\Repositories\PassengersRepository;
  * @author Luis Josafat Heredia Contreras
  */
 class CreatePassenger
-{
-    
+{    
     use LogicBusiness;
     
     protected $addIdentity;

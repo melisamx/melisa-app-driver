@@ -10,8 +10,7 @@ use App\Driver\Repositories\DriversRepository;
  * @author Luis Josafat Heredia Contreras
  */
 class CreateDriver
-{
-    
+{    
     use LogicBusiness;
     
     protected $addIdentity;

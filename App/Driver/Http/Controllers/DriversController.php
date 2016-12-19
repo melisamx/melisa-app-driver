@@ -5,6 +5,11 @@ use App\Driver\Modules\Drivers\DashboardModule;
 use App\Driver\Modules\Drivers\ManifestClassicModule;
 use App\Driver\Modules\Drivers\ManifestModernModule;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class DriversController extends Controller
 {
     

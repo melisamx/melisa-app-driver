@@ -3,6 +3,11 @@
 use Illuminate\Database\Seeder;
 use Melisa\Laravel\Database\UpdateOrCreate;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class OptionsSeeder extends Seeder
 {
     use UpdateOrCreate;

@@ -1,5 +1,10 @@
 <?php namespace App\Driver\Database\Seeds;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class DriversSeeder extends InstallDriverSeeder
 {
     

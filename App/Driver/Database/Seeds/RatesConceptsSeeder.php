@@ -2,6 +2,11 @@
 
 use App\Driver\Database\Seeds\InstallDriverSeeder;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class RatesConceptsSeeder extends InstallDriverSeeder
 {
     
