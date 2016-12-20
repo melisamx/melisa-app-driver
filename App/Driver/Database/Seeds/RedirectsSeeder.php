@@ -17,10 +17,19 @@ class RedirectsSeeder extends InstallSeeder
         
         $this->installRedirect('driver', $name, [
             'description'=>'Redirect all identities Drivers to Application Driver',
-            'path'=>'driver'
+            'path'=>'drivers/'
         ]);
         
         $this->installRedirectProfile($name, 'driver');
+        
+        $name = 'Redirect Passengers to Application Driver';
+        
+        $this->installRedirect('driver', $name, [
+            'description'=>'Redirect all identities Passengers to Application Driver',
+            'path'=>'passengers/'
+        ]);
+        
+        $this->installRedirectProfile($name, 'passenger');
         
     }
     

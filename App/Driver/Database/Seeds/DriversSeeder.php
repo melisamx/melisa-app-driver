@@ -28,7 +28,7 @@ class DriversSeeder extends InstallDriverSeeder
         $this->updateOrCreate('App\Driver\Models\Drivers', [
             [
                 'id'=>$id,
-                'idVehicle'=>$id,
+                'idVehicle'=>$this->findVehicle('AAA-111-222')->id,
                 'idPeople'=>$id,
             ]
         ]);
