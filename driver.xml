@@ -9,7 +9,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Application Driver Test Suite">
+        <testsuite name="Application Driver">
             <directory suffix="Test.php">./App/Driver/tests</directory>
         </testsuite>
     </testsuites>
