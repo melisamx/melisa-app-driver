@@ -1,5 +1,7 @@
 <?php namespace App\Driver\Database\Seeds;
 
+use App\Driver\Models\Drivers;
+
 /**
  * 
  *
@@ -25,12 +27,11 @@ class DriversSeeder extends InstallDriverSeeder
         
         $this->call(VehiclesSeeder::class);
         
-        $this->updateOrCreate('App\Driver\Models\Drivers', [
-            [
-                'id'=>$id,
-                'idVehicle'=>$this->findVehicle('AAA-111-222')->id,
-                'idPeople'=>$id,
-            ]
+        Drivers::updateOrCreate([
+            'id'=>$id,
+        ], [
+            'idVehicle'=>$this->findVehicle('AAA-111-222')->id,
+            'idPeople'=>$id,
         ]);
         
     }
